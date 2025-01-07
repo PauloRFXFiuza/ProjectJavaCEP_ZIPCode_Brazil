@@ -17,6 +17,8 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import Atxy2k.CustomTextField.RestrictedTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Cep extends JFrame {
 
@@ -112,6 +114,13 @@ public class Cep extends JFrame {
 		contentPane.add(btnLimpar);
 		
 		JButton btnCep = new JButton("Search - Buscar");
+		btnCep.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (txtCep.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "Enter the ZIP code - Informe o CEP");
+				}
+			}
+		});
 		btnCep.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnCep.setBounds(new Rectangle(5, 5, 5, 5));
 		btnCep.setBorder(null);
