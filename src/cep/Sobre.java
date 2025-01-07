@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JDialog;
 import java.awt.Toolkit;
+import java.awt.Color;
 
 public class Sobre extends JDialog {
 
@@ -30,6 +31,8 @@ public class Sobre extends JDialog {
 	 * Create the dialog.
 	 */
 	public Sobre() {
+		getContentPane().setBackground(new Color(128, 128, 128));
+		getContentPane().setLayout(null);
 		setResizable(false);
 		setTitle("About - Sobre");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Sobre.class.getResource("/img/home.png")));
