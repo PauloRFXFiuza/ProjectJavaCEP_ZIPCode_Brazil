@@ -126,5 +126,8 @@ public class Cep extends JFrame {
 		btnSobre.setBounds(25, 156, 48, 48);
 		contentPane.add(btnSobre);
 		
+		/* Using the Atxy2k library for validating the txtCep field 
+		 * Utilizando a biblioteca Atxy2k para validação do campo txtCep */
+		
 	}//End of constructor- Fim do construtor
 }
