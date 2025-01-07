@@ -10,6 +10,8 @@ import java.awt.SystemColor;
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.Cursor;
+import java.awt.Desktop;
+
 import javax.swing.ImageIcon;
 
 public class Sobre extends JDialog {
@@ -80,6 +82,11 @@ public class Sobre extends JDialog {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Sobre.class.getResource("/img/home.png")));
 		setBounds(150, 150, 450, 300);
 
-	}
+	} //End of constructor- Fim do construtor
 
+	private void link(String site) {
+		Desktop desktop = Desktop.getDesktop();
+		
+	}
+	
 }
