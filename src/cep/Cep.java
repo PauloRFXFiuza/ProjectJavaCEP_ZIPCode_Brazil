@@ -20,8 +20,8 @@ public class Cep extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField txtCep;
+	private JTextField txtEndereco;
 	private JTextField textField_2;
 	private JTextField textField_3;
 
@@ -61,19 +61,19 @@ public class Cep extends JFrame {
 		lblNewLabel.setBounds(25, 24, 104, 14);
 		contentPane.add(lblNewLabel);
 		
-		textField = new JTextField();
-		textField.setBounds(150, 21, 80, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtCep = new JTextField();
+		txtCep.setBounds(150, 21, 80, 20);
+		contentPane.add(txtCep);
+		txtCep.setColumns(10);
 		
 		JLabel lblAddressEndereo = new JLabel("Address- Endereço");
 		lblAddressEndereo.setBounds(25, 60, 115, 14);
 		contentPane.add(lblAddressEndereo);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(150, 57, 256, 20);
-		contentPane.add(textField_1);
+		txtEndereco = new JTextField();
+		txtEndereco.setColumns(10);
+		txtEndereco.setBounds(150, 57, 256, 20);
+		contentPane.add(txtEndereco);
 		
 		JLabel lblZipCode = new JLabel("Borough - Bairro");
 		lblZipCode.setBounds(25, 94, 104, 14);
@@ -108,20 +108,20 @@ public class Cep extends JFrame {
 		btnNewButton.setBounds(25, 215, 130, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Search - Buscar");
-		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton_1.setBounds(new Rectangle(5, 5, 5, 5));
-		btnNewButton_1.setBorder(null);
-		btnNewButton_1.setBounds(276, 20, 130, 23);
-		contentPane.add(btnNewButton_1);
+		JButton btnCep = new JButton("Search - Buscar");
+		btnCep.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnCep.setBounds(new Rectangle(5, 5, 5, 5));
+		btnCep.setBorder(null);
+		btnCep.setBounds(276, 20, 130, 23);
+		contentPane.add(btnCep);
 		
-		JButton btnNewButton_2 = new JButton("");
-		btnNewButton_2.setToolTipText("About - Sobre");
-		btnNewButton_2.setIcon(new ImageIcon(Cep.class.getResource("/img/about.png")));
-		btnNewButton_2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton_2.setBorder(null);
-		btnNewButton_2.setBackground(new Color(128, 128, 128));
-		btnNewButton_2.setBounds(25, 156, 48, 48);
-		contentPane.add(btnNewButton_2);
+		JButton btnSobre = new JButton("");
+		btnSobre.setToolTipText("About - Sobre");
+		btnSobre.setIcon(new ImageIcon(Cep.class.getResource("/img/about.png")));
+		btnSobre.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnSobre.setBorder(null);
+		btnSobre.setBackground(new Color(128, 128, 128));
+		btnSobre.setBounds(25, 156, 48, 48);
+		contentPane.add(btnSobre);
 	}
 }
