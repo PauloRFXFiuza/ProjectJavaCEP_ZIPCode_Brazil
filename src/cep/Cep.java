@@ -17,6 +17,7 @@ public class Cep extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -76,13 +77,22 @@ public class Cep extends JFrame {
 		textField_2.setBounds(129, 91, 277, 20);
 		contentPane.add(textField_2);
 		
-		JLabel lblCityCidade = new JLabel("City- Cidade");
-		lblCityCidade.setBounds(25, 131, 104, 14);
+		JLabel lblCityCidade = new JLabel("UF");
+		lblCityCidade.setBounds(337, 131, 42, 14);
 		contentPane.add(lblCityCidade);
 		
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
-		textField_3.setBounds(98, 128, 210, 20);
+		textField_3.setBounds(113, 128, 214, 20);
 		contentPane.add(textField_3);
+		
+		JLabel lblCityCidade_1 = new JLabel("City- Cidade");
+		lblCityCidade_1.setBounds(25, 131, 104, 14);
+		contentPane.add(lblCityCidade_1);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(364, 128, 42, 20);
+		contentPane.add(textField_4);
 	}
 }
