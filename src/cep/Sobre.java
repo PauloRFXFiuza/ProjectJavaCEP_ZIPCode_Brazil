@@ -87,6 +87,7 @@ public class Sobre extends JDialog {
 		Desktop desktop = Desktop.getDesktop();
 		try {
 			URI uri = new URI(site);
+			desktop.browse(uri);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
