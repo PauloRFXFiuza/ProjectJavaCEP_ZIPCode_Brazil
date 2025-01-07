@@ -22,8 +22,8 @@ public class Cep extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtCep;
 	private JTextField txtEndereco;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField txtBairro;
+	private JTextField txtCidade;
 
 	/**
 	 * Launch the application.
@@ -79,34 +79,34 @@ public class Cep extends JFrame {
 		lblZipCode.setBounds(25, 94, 104, 14);
 		contentPane.add(lblZipCode);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(150, 91, 256, 20);
-		contentPane.add(textField_2);
+		txtBairro = new JTextField();
+		txtBairro.setColumns(10);
+		txtBairro.setBounds(150, 91, 256, 20);
+		contentPane.add(txtBairro);
 		
 		JLabel lblCityCidade = new JLabel("UF");
 		lblCityCidade.setBounds(337, 131, 42, 14);
 		contentPane.add(lblCityCidade);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(150, 128, 177, 20);
-		contentPane.add(textField_3);
+		txtCidade = new JTextField();
+		txtCidade.setColumns(10);
+		txtCidade.setBounds(150, 128, 177, 20);
+		contentPane.add(txtCidade);
 		
 		JLabel lblCityCidade_1 = new JLabel("City- Cidade");
 		lblCityCidade_1.setBounds(25, 131, 104, 14);
 		contentPane.add(lblCityCidade_1);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(357, 127, 49, 22);
-		contentPane.add(comboBox);
+		JComboBox cboUf = new JComboBox();
+		cboUf.setBounds(357, 127, 49, 22);
+		contentPane.add(cboUf);
 		
-		JButton btnNewButton = new JButton("Clean - Limpar");
-		btnNewButton.setBounds(new Rectangle(5, 5, 5, 5));
-		btnNewButton.setBorder(null);
-		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton.setBounds(25, 215, 130, 23);
-		contentPane.add(btnNewButton);
+		JButton btnLimpar = new JButton("Clean - Limpar");
+		btnLimpar.setBounds(new Rectangle(5, 5, 5, 5));
+		btnLimpar.setBorder(null);
+		btnLimpar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnLimpar.setBounds(25, 215, 130, 23);
+		contentPane.add(btnLimpar);
 		
 		JButton btnCep = new JButton("Search - Buscar");
 		btnCep.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
