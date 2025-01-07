@@ -67,6 +67,7 @@ public class Sobre extends JDialog {
 		getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNewButton_1.setToolTipText("GitHub");
 		btnNewButton_1.setIcon(new ImageIcon(Sobre.class.getResource("/img/github.png")));
 		btnNewButton_1.setBorder(null);
