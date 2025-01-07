@@ -125,5 +125,6 @@ public class Cep extends JFrame {
 		btnSobre.setBackground(new Color(128, 128, 128));
 		btnSobre.setBounds(25, 156, 48, 48);
 		contentPane.add(btnSobre);
-	}
+		
+	}//End of constructor- Fim do construtor
 }
