@@ -14,6 +14,7 @@ import java.awt.SystemColor;
 import java.awt.Cursor;
 import javax.swing.ImageIcon;
 import java.awt.Color;
+import java.awt.Rectangle;
 
 public class Cep extends JFrame {
 
@@ -101,10 +102,16 @@ public class Cep extends JFrame {
 		contentPane.add(comboBox);
 		
 		JButton btnNewButton = new JButton("Clean - Limpar");
+		btnNewButton.setBounds(new Rectangle(5, 5, 5, 5));
+		btnNewButton.setBorder(null);
+		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNewButton.setBounds(25, 215, 130, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Search - Buscar");
+		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNewButton_1.setBounds(new Rectangle(5, 5, 5, 5));
+		btnNewButton_1.setBorder(null);
 		btnNewButton_1.setBounds(276, 20, 130, 23);
 		contentPane.add(btnNewButton_1);
 		
