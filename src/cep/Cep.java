@@ -8,6 +8,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.JComboBox;
 
 public class Cep extends JFrame {
 
@@ -17,7 +18,6 @@ public class Cep extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
-	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -90,9 +90,8 @@ public class Cep extends JFrame {
 		lblCityCidade_1.setBounds(25, 131, 104, 14);
 		contentPane.add(lblCityCidade_1);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(364, 128, 42, 20);
-		contentPane.add(textField_4);
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(357, 127, 49, 22);
+		contentPane.add(comboBox);
 	}
 }
