@@ -1,18 +1,17 @@
 package cep;
 
-import java.awt.EventQueue;
-
-import javax.swing.JDialog;
-import java.awt.Toolkit;
 import java.awt.Color;
-import javax.swing.JLabel;
-import java.awt.SystemColor;
-import java.awt.Font;
-import javax.swing.JButton;
 import java.awt.Cursor;
 import java.awt.Desktop;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Toolkit;
+import java.net.URI;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
 
 public class Sobre extends JDialog {
 
@@ -86,7 +85,11 @@ public class Sobre extends JDialog {
 
 	private void link(String site) {
 		Desktop desktop = Desktop.getDesktop();
-		
+		try {
+			URI uri = new URI(site);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 	
 }
