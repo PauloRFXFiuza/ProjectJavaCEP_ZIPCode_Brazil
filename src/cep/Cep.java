@@ -15,6 +15,7 @@ import java.awt.Cursor;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.Rectangle;
+import javax.swing.DefaultComboBoxModel;
 
 public class Cep extends JFrame {
 
@@ -98,6 +99,7 @@ public class Cep extends JFrame {
 		contentPane.add(lblCityCidade_1);
 		
 		JComboBox cboUf = new JComboBox();
+		cboUf.setModel(new DefaultComboBoxModel(new String[] {"", "AC", "", "AL", "", "AP", "", "AM", "", "BA", "", "CE", "", "DF", "", "ES", "", "GO", "", "MA", "", "MT", "", "MS", "", "MG", "", "PA", "", "PB", "", "PR", "", "PE", "", "PI", "", "RJ", "", "RN", "", "RS", "", "RO", "", "RR", "", "SC", "", "SP", "", "SE", "", "TO"}));
 		cboUf.setBounds(357, 127, 49, 22);
 		contentPane.add(cboUf);
 		
