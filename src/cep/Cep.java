@@ -32,7 +32,7 @@ public class Cep extends JFrame {
 	 * Create the frame.
 	 */
 	public Cep() {
-		setTitle("Search Brazil Zip Code- CEP");
+		setTitle("Search Brazil Zip Code-Buscar CEP");
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Cep.class.getResource("/img/home.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
