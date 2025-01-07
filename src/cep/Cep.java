@@ -131,6 +131,8 @@ public class Cep extends JFrame {
 		 * Utilizando a biblioteca Atxy2k para validação do campo txtCep */
 		
 		RestrictedTextField validar = new RestrictedTextField(txtCep);
+		validar.setOnlyNums(true);
+		validar.setLimit(8);
 		
 	} //End of constructor- Fim do construtor
 }
