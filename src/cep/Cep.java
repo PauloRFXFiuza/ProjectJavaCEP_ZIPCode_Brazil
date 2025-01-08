@@ -181,6 +181,7 @@ public class Cep extends JFrame {
 			// iterate through child elements of root
 		    for (Iterator<Element> it = root.elementIterator(); it.hasNext();) {
 		        Element element = it.next();
+		     // do something
 		        if (element.getQualifiedName().equals("cidade")) {
 		        	txtCidade.setText(element.getText());
 		        }
@@ -190,7 +191,13 @@ public class Cep extends JFrame {
 		        if (element.getQualifiedName().equals("uf")) {
 		        	cboUf.setSelectedItem(element.getText());
 		        }
-		        // do something
+		        if (element.getQualifiedName().equals("tipo_logradouro")) {
+		        	tipoLogradouro= element.getText();
+		        }
+		        if (element.getQualifiedName().equals("logradouro")) {
+		        	logradouro= element.getText();
+		        }
+		        
 		    }
 		} catch (Exception e) {
 			System.out.println(e);
