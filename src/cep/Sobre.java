@@ -12,6 +12,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Sobre extends JDialog {
 
@@ -60,6 +62,11 @@ public class Sobre extends JDialog {
 		getContentPane().add(lblThankYouSo);
 		
 		JButton btnLinkedin = new JButton("");
+		btnLinkedin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				link("https://www.linkedin.com/in/paulo-fiuza/")
+			}
+		});
 		btnLinkedin.setIcon(new ImageIcon(Sobre.class.getResource("/img/linkedin.png")));
 		btnLinkedin.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnLinkedin.setBackground(new Color(128, 128, 128));
