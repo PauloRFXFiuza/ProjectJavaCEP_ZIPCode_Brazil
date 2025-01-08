@@ -35,6 +35,7 @@ public class Cep extends JFrame {
 	private JTextField txtEndereco;
 	private JTextField txtBairro;
 	private JTextField txtCidade;
+	private JComboBox cboUf;
 
 	/**
 	 * Launch the application.
@@ -108,7 +109,7 @@ public class Cep extends JFrame {
 		lblCityCidade_1.setBounds(25, 131, 104, 14);
 		contentPane.add(lblCityCidade_1);
 
-		JComboBox cboUf = new JComboBox();
+		cboUf = new JComboBox();
 		cboUf.setModel(new DefaultComboBoxModel(
 				new String[] { "", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
 						"PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
@@ -185,6 +186,9 @@ public class Cep extends JFrame {
 		        }
 		        if (element.getQualifiedName().equals("bairro")) {
 		        	txtBairro.setText(element.getText());
+		        }
+		        if (element.getQualifiedName().equals("uf")) {
+		        	txtCidade.setText(element.getText());
 		        }
 		        // do something
 		    }
