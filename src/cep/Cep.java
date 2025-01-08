@@ -121,7 +121,7 @@ public class Cep extends JFrame {
 					JOptionPane.showMessageDialog(null, "Enter the ZIP code - Informe o CEP");
 					txtCep.requestFocus();
 				}else {
-					// Search Zip Code- Buscar CEP
+					buscarCep();
 				}
 			}
 		});
@@ -156,7 +156,7 @@ public class Cep extends JFrame {
 	} //End of constructor- Fim do construtor
 	
 	private void buscarCep(){
-	
+		
 	}
 	
 }
