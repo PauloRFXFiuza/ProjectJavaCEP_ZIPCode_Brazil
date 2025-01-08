@@ -199,6 +199,9 @@ public class Cep extends JFrame {
 		        }
 		        
 		    }
+		    // Change the address field - Alterar o campo endereço
+		    txtEndereco.setText(tipoLogradouro + "" + logradouro);
+		    
 		} catch (Exception e) {
 			System.out.println(e);
 		}
