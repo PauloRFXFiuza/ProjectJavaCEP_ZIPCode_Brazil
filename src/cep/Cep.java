@@ -154,4 +154,9 @@ public class Cep extends JFrame {
 		validar.setLimit(8);
 		
 	} //End of constructor- Fim do construtor
+	
+	private void buscarCep(){
+	
+	}
+	
 }
