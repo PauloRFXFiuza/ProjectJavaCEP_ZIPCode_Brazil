@@ -61,66 +61,68 @@ public class Cep extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblNewLabel = new JLabel("ZIP CODE - CEP");
 		lblNewLabel.setBounds(25, 24, 104, 14);
 		contentPane.add(lblNewLabel);
-		
+
 		txtCep = new JTextField();
 		txtCep.setBounds(150, 21, 80, 20);
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
-		
+
 		JLabel lblAddressEndereo = new JLabel("Address- Endereço");
 		lblAddressEndereo.setBounds(25, 60, 115, 14);
 		contentPane.add(lblAddressEndereo);
-		
+
 		txtEndereco = new JTextField();
 		txtEndereco.setColumns(10);
 		txtEndereco.setBounds(150, 57, 256, 20);
 		contentPane.add(txtEndereco);
-		
+
 		JLabel lblZipCode = new JLabel("Borough - Bairro");
 		lblZipCode.setBounds(25, 94, 104, 14);
 		contentPane.add(lblZipCode);
-		
+
 		txtBairro = new JTextField();
 		txtBairro.setColumns(10);
 		txtBairro.setBounds(150, 91, 256, 20);
 		contentPane.add(txtBairro);
-		
+
 		JLabel lblCityCidade = new JLabel("UF");
 		lblCityCidade.setBounds(337, 131, 42, 14);
 		contentPane.add(lblCityCidade);
-		
+
 		txtCidade = new JTextField();
 		txtCidade.setColumns(10);
 		txtCidade.setBounds(150, 128, 177, 20);
 		contentPane.add(txtCidade);
-		
+
 		JLabel lblCityCidade_1 = new JLabel("City- Cidade");
 		lblCityCidade_1.setBounds(25, 131, 104, 14);
 		contentPane.add(lblCityCidade_1);
-		
+
 		JComboBox cboUf = new JComboBox();
-		cboUf.setModel(new DefaultComboBoxModel(new String[] {"", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"}));
+		cboUf.setModel(new DefaultComboBoxModel(
+				new String[] { "", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
+						"PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
 		cboUf.setBounds(357, 127, 49, 22);
 		contentPane.add(cboUf);
-		
+
 		JButton btnLimpar = new JButton("Clean - Limpar");
 		btnLimpar.setBounds(new Rectangle(5, 5, 5, 5));
 		btnLimpar.setBorder(null);
 		btnLimpar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnLimpar.setBounds(25, 215, 130, 23);
 		contentPane.add(btnLimpar);
-		
+
 		JButton btnCep = new JButton("Search - Buscar");
 		btnCep.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (txtCep.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Enter the ZIP code - Informe o CEP");
 					txtCep.requestFocus();
-				}else {
+				} else {
 					buscarCep();
 				}
 			}
@@ -130,7 +132,7 @@ public class Cep extends JFrame {
 		btnCep.setBorder(null);
 		btnCep.setBounds(276, 20, 130, 23);
 		contentPane.add(btnCep);
-		
+
 		JButton btnSobre = new JButton("");
 		btnSobre.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -145,18 +147,29 @@ public class Cep extends JFrame {
 		btnSobre.setBackground(new Color(128, 128, 128));
 		btnSobre.setBounds(25, 156, 48, 48);
 		contentPane.add(btnSobre);
-		
-		/* Using the Atxy2k library for validating the txtCep field 
-		 * Utilizando a biblioteca Atxy2k para validação do campo txtCep */
-		
+
+		/*
+		 * Using the Atxy2k library for validating the txtCep field Utilizando a
+		 * biblioteca Atxy2k para validação do campo txtCep
+		 */
+
 		RestrictedTextField validar = new RestrictedTextField(txtCep);
 		validar.setOnlyNums(true);
 		validar.setLimit(8);
-		
-	} //End of constructor- Fim do construtor
-	
-	private void buscarCep(){
-		
+
+	} // End of constructor- Fim do construtor
+
+	private void buscarCep() {
+		String logradouro = "";
+		String tipoLogradouro = "";
+		String resultado = null;
+		String cep = txtCep.getText();
+
+		try {
+			URL url = new URL("http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=xml");
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
-	
+
 }
