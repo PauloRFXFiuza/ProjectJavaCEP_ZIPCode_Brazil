@@ -188,7 +188,7 @@ public class Cep extends JFrame {
 		        	txtBairro.setText(element.getText());
 		        }
 		        if (element.getQualifiedName().equals("uf")) {
-		        	txtCidade.setText(element.getText());
+		        	cboUf.setSelectedItem(element.getText());
 		        }
 		        // do something
 		    }
