@@ -118,6 +118,11 @@ public class Cep extends JFrame {
 		contentPane.add(cboUf);
 
 		JButton btnLimpar = new JButton("Clean - Limpar");
+		btnLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				limpar();
+			}
+		});
 		btnLimpar.setBounds(new Rectangle(5, 5, 5, 5));
 		btnLimpar.setBorder(null);
 		btnLimpar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -162,7 +167,7 @@ public class Cep extends JFrame {
 		 */
 
 		RestrictedTextField validar = new RestrictedTextField(txtCep);
-		
+
 		lblStatus = new JLabel("");
 		lblStatus.setBounds(254, 159, 48, 48);
 		contentPane.add(lblStatus);
@@ -184,40 +189,50 @@ public class Cep extends JFrame {
 			Document documento = xml.read(url);
 			Element root = documento.getRootElement();
 			// iterate through child elements of root
-		    for (Iterator<Element> it = root.elementIterator(); it.hasNext();) {
-		        Element element = it.next();
-		     // do something
-		        if (element.getQualifiedName().equals("cidade")) {
-		        	txtCidade.setText(element.getText());
-		        }
-		        if (element.getQualifiedName().equals("bairro")) {
-		        	txtBairro.setText(element.getText());
-		        }
-		        if (element.getQualifiedName().equals("uf")) {
-		        	cboUf.setSelectedItem(element.getText());
-		        }
-		        if (element.getQualifiedName().equals("tipo_logradouro")) {
-		        	tipoLogradouro= element.getText();
-		        }
-		        if (element.getQualifiedName().equals("logradouro")) {
-		        	logradouro= element.getText();
-		        }
-		        if (element.getQualifiedName().equals("resultado")) {
-		        	resultado= element.getText();
-		        	if (resultado.equals("1")) {
-		        		lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png")));
-		        	}else {
-		        		JOptionPane.showMessageDialog(null, "ZIP Code not found - CEP não encontrado");
-		        	}
-		        }
-		        
-		    }
-		    // Change the address field - Alterar o campo endereço
-		    txtEndereco.setText(tipoLogradouro + " " + logradouro);
-		    
+			for (Iterator<Element> it = root.elementIterator(); it.hasNext();) {
+				Element element = it.next();
+				// do something
+				if (element.getQualifiedName().equals("cidade")) {
+					txtCidade.setText(element.getText());
+				}
+				if (element.getQualifiedName().equals("bairro")) {
+					txtBairro.setText(element.getText());
+				}
+				if (element.getQualifiedName().equals("uf")) {
+					cboUf.setSelectedItem(element.getText());
+				}
+				if (element.getQualifiedName().equals("tipo_logradouro")) {
+					tipoLogradouro = element.getText();
+				}
+				if (element.getQualifiedName().equals("logradouro")) {
+					logradouro = element.getText();
+				}
+				if (element.getQualifiedName().equals("resultado")) {
+					resultado = element.getText();
+					if (resultado.equals("1")) {
+						lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png")));
+					} else {
+						JOptionPane.showMessageDialog(null, "ZIP Code not found - CEP não encontrado");
+					}
+				}
+
+			}
+			// Change the address field - Alterar o campo endereço
+			txtEndereco.setText(tipoLogradouro + " " + logradouro);
+
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+	}
+
+	private void limpar() {
+		txtCep.setText(null);
+		txtEndereco.setText(null);
+		txtBairro.setText(null);
+		txtCidade.setText(null);
+		cboUf.setSelectedItem(null);
+		lblStatus.setIcon(null);
+		txtCep.requestFocus();
 	}
 
 }
