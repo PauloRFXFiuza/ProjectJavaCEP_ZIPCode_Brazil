@@ -117,7 +117,7 @@ public class Cep extends JFrame {
 		cboUf.setBounds(357, 127, 49, 22);
 		contentPane.add(cboUf);
 
-		JButton btnLimpar = new JButton("Clean - Limpar");
+		JButton btnLimpar = new JButton("New Request - Nova Consulta");
 		btnLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				limpar();
@@ -126,7 +126,7 @@ public class Cep extends JFrame {
 		btnLimpar.setBounds(new Rectangle(5, 5, 5, 5));
 		btnLimpar.setBorder(null);
 		btnLimpar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnLimpar.setBounds(25, 215, 130, 23);
+		btnLimpar.setBounds(25, 215, 169, 23);
 		contentPane.add(btnLimpar);
 
 		JButton btnCep = new JButton("Search - Buscar");
