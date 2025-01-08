@@ -14,6 +14,9 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Sobre extends JDialog {
 
@@ -49,16 +52,16 @@ public class Sobre extends JDialog {
 		getContentPane().add(lblNewLabel);
 		
 		JLabel lblauthorPauloFiuza = new JLabel("@Author Paulo Fiuza - FullStack Dev");
-		lblauthorPauloFiuza.setBounds(25, 71, 340, 14);
+		lblauthorPauloFiuza.setBounds(25, 55, 340, 14);
 		getContentPane().add(lblauthorPauloFiuza);
 		
 		JLabel lblWebPage = new JLabel("Web Pages: ");
-		lblWebPage.setBounds(190, 160, 73, 14);
+		lblWebPage.setBounds(190, 168, 73, 14);
 		getContentPane().add(lblWebPage);
 		
 		JLabel lblThankYouSo = new JLabel("Thank you so much- Muito obrigado");
 		lblThankYouSo.setFont(new Font("Tahoma", Font.BOLD, 13));
-		lblThankYouSo.setBounds(25, 115, 340, 21);
+		lblThankYouSo.setBounds(25, 80, 340, 21);
 		getContentPane().add(lblThankYouSo);
 		
 		JButton btnLinkedin = new JButton("");
@@ -76,6 +79,11 @@ public class Sobre extends JDialog {
 		getContentPane().add(btnLinkedin);
 		
 		JButton btnGithub = new JButton("");
+		btnGithub.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				link("https://github.com/PauloRFXFiuza");
+			}
+		});
 		btnGithub.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnGithub.setToolTipText("GitHub");
 		btnGithub.setIcon(new ImageIcon(Sobre.class.getResource("/img/github.png")));
@@ -83,6 +91,19 @@ public class Sobre extends JDialog {
 		btnGithub.setBackground(Color.GRAY);
 		btnGithub.setBounds(273, 191, 48, 48);
 		getContentPane().add(btnGithub);
+		
+		JLabel lblRepVirt = new JLabel("Zip Code -CEP Site");
+		lblRepVirt.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		lblRepVirt.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				link("https://republicavirtual.com.br");
+			}
+		});
+		lblRepVirt.setForeground(SystemColor.textHighlight);
+		lblRepVirt.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblRepVirt.setBounds(145, 112, 132, 31);
+		getContentPane().add(lblRepVirt);
 		setResizable(false);
 		setTitle("About - Sobre");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Sobre.class.getResource("/img/home.png")));
@@ -99,5 +120,4 @@ public class Sobre extends JDialog {
 			System.out.println(e);
 		}
 	}
-	
 }
