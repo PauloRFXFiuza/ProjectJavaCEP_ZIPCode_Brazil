@@ -93,6 +93,7 @@ public class Sobre extends JDialog {
 		getContentPane().add(btnGithub);
 		
 		JLabel lblRepVirt = new JLabel("Zip Code -CEP Site");
+		lblRepVirt.setToolTipText("República Virtual");
 		lblRepVirt.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblRepVirt.addMouseListener(new MouseAdapter() {
 			@Override
