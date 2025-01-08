@@ -213,6 +213,8 @@ public class Cep extends JFrame {
 						lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png")));
 					} else {
 						JOptionPane.showMessageDialog(null, "ZIP Code not found - CEP não encontrado");
+						txtCep.setText(null);
+						txtCep.requestFocus();
 					}
 				}
 
