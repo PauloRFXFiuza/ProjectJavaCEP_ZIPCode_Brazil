@@ -64,7 +64,7 @@ public class Sobre extends JDialog {
 		JButton btnLinkedin = new JButton("");
 		btnLinkedin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				link("https://www.linkedin.com/in/paulo-fiuza/")
+				link("https://www.linkedin.com/in/paulo-fiuza/");
 			}
 		});
 		btnLinkedin.setIcon(new ImageIcon(Sobre.class.getResource("/img/linkedin.png")));
