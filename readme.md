@@ -63,6 +63,8 @@ Conclusion
 
 This application simplifies the process of searching for Brazilian ZIP codes, making it accessible to non-technical users. Its intuitive interface, robust validation, and integration with a reliable external service make it practical for everyday use. The inclusion of developer information adds a personal touch, enhancing user experience and transparency.
 
+________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
 Relatório Detalhado: Aplicação de Busca de CEP no Brasil
 
 Introdução
