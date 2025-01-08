@@ -36,7 +36,7 @@ public class Cep extends JFrame {
 	private JTextField txtBairro;
 	private JTextField txtCidade;
 	private JComboBox cboUf;
-	private JLabel lblNewLabel_1;
+	private JLabel lblStatus;
 
 	/**
 	 * Launch the application.
@@ -163,9 +163,9 @@ public class Cep extends JFrame {
 
 		RestrictedTextField validar = new RestrictedTextField(txtCep);
 		
-		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setBounds(254, 159, 48, 48);
-		contentPane.add(lblNewLabel_1);
+		lblStatus = new JLabel("");
+		lblStatus.setBounds(254, 159, 48, 48);
+		contentPane.add(lblStatus);
 		validar.setOnlyNums(true);
 		validar.setLimit(8);
 
@@ -205,7 +205,7 @@ public class Cep extends JFrame {
 		        if (element.getQualifiedName().equals("resultado")) {
 		        	resultado= element.getText();
 		        	if (resultado.equals("1")) {
-		        		
+		        		lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/check.png")));
 		        	}else {
 		        		JOptionPane.showMessageDialog(null, "ZIP Code not found - CEP não encontrado");
 		        	}
