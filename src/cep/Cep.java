@@ -7,10 +7,9 @@ import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.util.Iterator;
 
-import javax.print.DocFlavor.URL;
+import java.net.URL;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -173,7 +172,8 @@ public class Cep extends JFrame {
 		String cep = txtCep.getText();
 
 		try {
-			File url = new File("http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=xml");
+			@SuppressWarnings("deprecation")
+			URL url = new URL("http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=xml");
 			SAXReader xml = new SAXReader();
 			Document documento = xml.read(url);
 			Element root = documento.getRootElement();
